@@ -1,5 +1,6 @@
 package com.jackrr.crystalline;
 
+import com.jackrr.crystalline.data.ModDataComponents;
 import com.jackrr.crystalline.item.ModItems;
 import com.jackrr.crystalline.tab.ModCreativeModeTabs;
 import org.slf4j.Logger;
@@ -23,5 +24,6 @@ public class Crystalline {
     public Crystalline(IEventBus modEventBus, ModContainer modContainer) {
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
+        ModDataComponents.register(modEventBus);
     }
 }
