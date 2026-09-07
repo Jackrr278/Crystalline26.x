@@ -1,5 +1,6 @@
 package com.jackrr.crystalline;
 
+import com.jackrr.crystalline.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -19,5 +20,6 @@ public class Crystalline {
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public Crystalline(IEventBus modEventBus, ModContainer modContainer) {
+        ModItems.register(modEventBus);
     }
 }
