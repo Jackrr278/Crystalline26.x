@@ -21,7 +21,7 @@ version="${mod_version}" #mandatory
 displayName="${mod_name}" #mandatory
 
 # The authors of the mod, displayed in the mod UI (optional)
-authors="jackrr"
+authors="jackrr, BreadRick"
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''

@@ -11,7 +11,7 @@ public class ModItems {
             DeferredRegister.createItems(Crystalline.MODID);
 
     public static final DeferredItem<Item> RUBY_GEMSTONE = ITEMS.registerItem("ruby_gemstone",
-            properties -> new Item(properties),
+            ItemGem::new,
             properties -> properties
                     .stacksTo(1)
                     .fireResistant()
