@@ -3,7 +3,7 @@ package com.jackrr.crystalline.client;
 import com.jackrr.crystalline.Crystalline;
 import com.jackrr.crystalline.entity.ModEntities;
 import com.jackrr.crystalline.entity.client.ModelRuby;
-import com.jackrr.crystalline.entity.client.render.RendererRuby;
+import com.jackrr.crystalline.entity.client.RendererRuby;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;

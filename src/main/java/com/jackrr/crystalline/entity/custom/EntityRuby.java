@@ -1,6 +1,5 @@
 package com.jackrr.crystalline.entity.custom;
 
-import net.minecraft.core.UUIDUtil;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -8,9 +7,6 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.storage.ValueInput;
-import net.minecraft.world.level.storage.ValueOutput;
-
 import java.util.UUID;
 
 public class EntityRuby extends PathfinderMob {
@@ -22,7 +18,6 @@ public class EntityRuby extends PathfinderMob {
 
     public EntityRuby(EntityType<? extends PathfinderMob> type, Level level) {
         super(type, level);
-        this.gemUUID = UUID.randomUUID();
     }
 
     @Override
@@ -38,20 +33,6 @@ public class EntityRuby extends PathfinderMob {
 
     public UUID getGemUUID() {
         return gemUUID;
-    }
-
-    @Override
-    protected void addAdditionalSaveData(ValueOutput output) {
-        super.addAdditionalSaveData(output);
-
-        output.store("GemUUID", UUIDUtil.CODEC, gemUUID);
-    }
-
-    @Override
-    protected void readAdditionalSaveData(ValueInput input) {
-        super.readAdditionalSaveData(input);
-
-        this.gemUUID = input.read("GemUUID", UUIDUtil.CODEC).orElse(UUID.randomUUID());
     }
 
     public static AttributeSupplier.Builder createAttributes() {
