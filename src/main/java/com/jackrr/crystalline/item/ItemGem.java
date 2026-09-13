@@ -25,9 +25,6 @@ public class ItemGem extends Item {
 
         UUID gemUUID;
 
-
-
-
         if(stack.has(GEM_UUID)) {
             gemUUID = stack.get(GEM_UUID);
             System.out.println(gemUUID);
